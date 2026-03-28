@@ -1,0 +1,35 @@
+
+
+int led_verde=8;
+int led_giallo=9;
+int led_rosso=10;
+int bottone=11;
+
+void setup()
+{
+  pinMode(led_verde, OUTPUT);
+  pinMode(led_giallo, OUTPUT);
+  pinMode(led_rosso, OUTPUT);
+  pinMode(bottone, INPUT);
+  
+}
+
+void loop()
+{
+  int p=digitalRead(bottone);
+    if (p){
+  digitalWrite(8, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(8, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(9, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(9, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(10, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(10, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  }
+  
+}
