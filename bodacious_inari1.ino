@@ -1,0 +1,20 @@
+
+
+int led_rosso=10;
+int pote=A0;
+
+void setup()
+{
+  pinMode(led_rosso, OUTPUT);
+  pinMode(pote, INPUT);
+  
+  
+}
+
+void loop()
+{
+  int input=analogRead(pote);
+  int position=map(input, 0, 1023, 0, 255);
+  analogWrite(led_rosso, position);
+  
+}
